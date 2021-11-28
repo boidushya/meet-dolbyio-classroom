@@ -12,8 +12,8 @@ import {
 
 // Enter your credentials from Dolby.io here:
 // https://dolby.io/dashboard/applications/summary
-const consumerKey = '<DOLBYIO_COMMUNICATIONS_API>';
-const consumerSecret = '<DOLBYIO_COMMUNICATIONS_SECRET>';
+const consumerKey = '2ALT12qJ0LHIWmXmiQlU9g==';
+const consumerSecret = 'JiUllaau75QT6rsvehizT8I1SRoziNlZOqcVBzJxViU=';
 
 initialize(consumerKey, consumerSecret);
 
