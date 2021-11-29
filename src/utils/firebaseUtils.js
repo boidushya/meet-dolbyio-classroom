@@ -1,5 +1,5 @@
 import { db } from '../providers/Firebase';
-import { blankClassroom } from './constants';
+import blankClassroom from './constants';
 
 export const getFirebaseDataOnce = async ({ cell }) => {
   const ref = db.ref(cell);
