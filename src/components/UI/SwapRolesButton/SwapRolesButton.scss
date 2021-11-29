@@ -1,14 +1,13 @@
 @import '../../../styles/colors.scss';
 .swap-roles-button {
-  margin-right: 100px;
   user-select: none;
   cursor: pointer;
-  background-color: $primary-dark-3;
+  background-color: #0466C8;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;

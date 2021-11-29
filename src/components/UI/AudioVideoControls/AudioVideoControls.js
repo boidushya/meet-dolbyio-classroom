@@ -122,8 +122,8 @@ export default function AudioVideoControls({
       onClick={() => handleVideoButton(!isUserVideoActive)}
     >
       <VideoOnOffIcon
-        width={34}
-        height={34}
+        width={24}
+        height={24}
         fill={'white'}
         isVideoOff={!isUserVideoActive}
       />

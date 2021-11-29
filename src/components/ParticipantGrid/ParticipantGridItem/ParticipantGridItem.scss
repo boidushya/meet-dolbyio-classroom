@@ -6,7 +6,7 @@
   width: 186px;
   height: 186px;
   margin: 0.33rem;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   position: relative;
   background-color: $primary-dark-3;
   box-sizing: border-box;
@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 4px;
+    border-radius: 0.5rem;
   }
 
   &:hover .outline {

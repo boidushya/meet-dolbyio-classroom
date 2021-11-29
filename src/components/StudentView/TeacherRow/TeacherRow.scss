@@ -24,12 +24,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(
-      98.54% 310.54% at 51.09% 52.2%,
-      #1b1b27 0%,
-      #3d4484 49.48%,
-      #1b1b27 100%
-    );
+    background: $primary-dark-3;
+	border: 0.1rem solid $primary-dark-2;
     margin: 1rem;
     border-radius: 10px;
     // border: 1px solid green;
@@ -41,6 +37,7 @@
       box-sizing: border-box;
       position: relative;
       padding: 0.5rem;
+	  border-radius: 0.75rem;
 
       #teacher-screenshare-object {
         // display: none;

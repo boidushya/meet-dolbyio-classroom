@@ -66,8 +66,8 @@ export default function ParticipantGridItem({
       {!isVideo ? (
         <div className="participant-grid-item__no-video-icon-container">
           <VideoOnOffIcon
-            width={60}
-            height={60}
+            width={36}
+            height={36}
             fill="#ffffff55"
             isVideoOff={true}
           />
