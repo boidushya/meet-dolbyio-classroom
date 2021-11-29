@@ -7,9 +7,11 @@ import VideoOnOffIcon from '../../assets/VideoOnOffIcon';
 import MediaDropdown from '../MediaSelectors/MediaDropdown.js';
 import SettingsIcon from '../../assets/SettingsIcon.js';
 import LinkIcon from '../../assets/LinkIcon.js';
+import RecordIcon from '../../assets/RecordIcon.js';
 // style
 import '../MediaSelectors/MediaSelectors.scss';
 import './AudioVideoControls.scss';
+import ExitIcon from '../../assets/ExitIcon';
 
 export default function AudioVideoControls({
   isUserVideoActive,
@@ -129,12 +131,39 @@ export default function AudioVideoControls({
       />
     </div>
   );
+  const recordButton = (
+    <div
+      className={`audio-video-controls__button`}
+      onClick={() => window.alert('Recording is not supported yet.')}
+    >
+      <RecordIcon
+        width={36}
+        height={36}
+        fill={'white'}
+      />
+    </div>
+  );
+
+  const callExitButton = (
+    <div
+      className={`audio-video-controls__button exit-icon`}
+      onClick={() => window.location.reload()}
+    >
+      <ExitIcon
+        width={24}
+        height={24}
+        fill={'white'}
+      />
+    </div>
+  );
 
   return (
     <div className="audio-video-controls">
       {audioButton}
       {videoButton}
       {mediaSelectors}
+	  {recordButton}
+	  {callExitButton}
     </div>
   );
 }
