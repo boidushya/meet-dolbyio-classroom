@@ -9,7 +9,6 @@ export default function SwapIcon({ width, height, fill, additionalStyles }) {
     height: `${height}px`,
     ...additionalStyles,
   };
-  const viewBox = `0 0 ${24} ${24}`;
   return (
     <svg
       fill="white"
