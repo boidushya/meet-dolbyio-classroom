@@ -12,6 +12,9 @@ import RecordIcon from '../../assets/RecordIcon.js';
 import '../MediaSelectors/MediaSelectors.scss';
 import './AudioVideoControls.scss';
 import ExitIcon from '../../assets/ExitIcon';
+import {
+  recording
+} from '@voxeet/voxeet-web-sdk';
 
 export default function AudioVideoControls({
   isUserVideoActive,
@@ -19,13 +22,29 @@ export default function AudioVideoControls({
   handleVideoButton,
   handleAudioButton,
   hideMuteButton,
+  isStudent
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLinkCopied, setIsLinkCopied] = useState(false);
+  const [isRecording,setRecording] = useState(false);
 
   const handleClick = useCallback(() => {
     setIsMenuOpen(!isMenuOpen);
   }, [isMenuOpen]);
+
+  const startRecording = () => {
+    recording.start().then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {});
+    setRecording(true);    
+  }
+
+  const stopRecording = () => {
+    recording.stop().then(() => {})
+    .catch((err) => {});
+    setRecording(false);
+  }
 
   const handleLinkShareClick = useCallback(() => {
     // Copy the URL to the clipboard.
@@ -80,7 +99,7 @@ export default function AudioVideoControls({
         <LinkIcon
           width={24}
           height={24}
-          fill={isLinkCopied ? 'rgba(80, 176, 108, 1)' : 'white'}
+          fill={isLinkCopied ? 'rgba(80, 176, 108, 2)' : 'white'}
         />
       </div>
       <div
@@ -131,15 +150,26 @@ export default function AudioVideoControls({
       />
     </div>
   );
+
   const recordButton = (
     <div
       className={`audio-video-controls__button`}
-      onClick={() => window.alert('Recording is not supported yet.')}
+      onClick={() => {
+        if(isRecording) {
+          stopRecording();
+          window.alert("Recording stopped");
+        }
+        else{
+          startRecording();
+          window.alert("Recording started");
+        }
+      }}
     >
       <RecordIcon
-        width={36}
-        height={36}
-        fill={'white'}
+        width={50}
+        height={50}
+        fill={isRecording ? 'red' : 'white'}
+        fill1={isRecording ? 'red' : 'white'}
       />
     </div>
   );
@@ -162,7 +192,7 @@ export default function AudioVideoControls({
       {audioButton}
       {videoButton}
       {mediaSelectors}
-	  {recordButton}
+	  {!isStudent ? recordButton : ""}
 	  {callExitButton}
     </div>
   );

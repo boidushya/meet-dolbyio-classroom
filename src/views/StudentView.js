@@ -172,6 +172,7 @@ function StudentView({
       {/* Absolute positioned */}
       {seatSelection}
       <AudioVideoControls
+        isStudent={true}
         isUserVideoActive={isUserVideoActive}
         isUserAudioActive={isUserAudioActive}
         handleVideoButton={handleVideoActiveUpdate}

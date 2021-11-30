@@ -20,6 +20,8 @@ function TeacherView({
   isUserVideoActive,
   handleAudioActiveUpdate,
   handleVideoActiveUpdate,
+  startRecording,
+  stopRecording
 }) {
   const handleTeacherChange = useCallback(({ newData }) => {
     // setTeacherID(newData);
@@ -65,6 +67,8 @@ function TeacherView({
         isUserAudioActive={isUserAudioActive}
         handleVideoButton={handleVideoActiveUpdate}
         handleAudioButton={handleAudioActiveUpdate}
+        startRecording={startRecording}
+        stopRecording={stopRecording}
       />
 
       <div className="teacher-view__top-controls">

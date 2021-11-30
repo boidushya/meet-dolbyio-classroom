@@ -180,5 +180,5 @@ export {
   changeVideoDevice,
   startScreenShare,
   stopScreenShare,
-  getParticipantAudioLevel,
+  getParticipantAudioLevel
 };

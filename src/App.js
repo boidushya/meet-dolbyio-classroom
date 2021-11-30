@@ -28,6 +28,7 @@ function App() {
   const [isUserVideoActive, setIsUserVideoActive] = useState(true);
   const [isUserAudioActive, setIsUserAudioActive] = useState(false);
 
+
   // event handlers
   const handleTeacherChange = useCallback(
     ({ newData }) => {
