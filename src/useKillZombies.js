@@ -35,7 +35,7 @@ export const useKillZombies = ({
         }
 
         // For each "student" we are tracking in Firebase,
-        classRoom.forEach(({ participantId }, seat) => {
+        classRoom?.forEach(({ participantId }, seat) => {
           // see if there is a corresponding participant in the Dolby.io conference.
           const participant = conference.participants.get(participantId);
 
